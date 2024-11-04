@@ -1,0 +1,46 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package programtunjangan;
+
+/**
+ *
+ * @author LENOVO
+ * Nama : Ajeng Dita Pratama
+ * Kelas : Sistem Informasi
+ * NIM : 23176009
+ * Deskripsi program : Program ini berisi program untuk menampilkan
+ * gaji pokok perbulan
+ */
+
+import java.util.Scanner;
+public class ProgramTunjangan {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("========Program Tunjangan========");
+        System.out.print("Berapa gaji pokok anda perbulan?: Rp. ");
+        double gajiPokok = input.nextDouble();
+        
+        System.out.print("Status Anda? (Menikah/Belum): ");
+        String status = input.next();
+        
+        double tunjangan = 0;
+        
+        if (status.equalsIgnoreCase("Menikah")) {
+            tunjangan = gajiPokok * 0.35;
+        }
+        
+        double totalGaji = gajiPokok + tunjangan;
+        
+        System.out.println("\n========Hasil Perhitungan Gaji Anda========");
+        System.out.println("Gaji Pokok      : Rp " + gajiPokok);
+        System.out.println("Tunjangan       : Rp " + tunjangan);
+        System.out.println("Total Gaji      : Rp " + totalGaji);
+        System.out.println("(Developed by: Rifki Adam Kurniawan)");
+        
+        input.close();
+    }
+}
